@@ -1,0 +1,31 @@
+{
+  "login": {
+    "entrance": "כניסה",
+    "name": "דואר אלקטרוני",
+    "password": "סיסמא",
+    "login_button": "התחבר",
+    "signup_button": "אין לך חשבון עדיין?",
+    "login_error" : "שם משתמש או סיסמא שגויים"
+  },
+  "register": {
+    "title": "הרשמה",
+    "name": "שם",
+    "password": "סיסמא",
+    "country": "ארץ",
+    "city": "עיר",
+    "email" : "דואר אלקטרוני",
+    "phone": "טלפון למשלוח כדור",
+    "image": "תמונה",
+    "imageSelect": "בחר תמונה",
+    "signup_button": "הרשם",
+    "cancel_button": "ביטול",
+    "terms" : "אני מאשר את תנאי השימוש"
+  },
+  "user_profile": {
+    "entrance": "entrance"
+  },
+  "validators": {
+    "empty": "שדה זה אינו יכול להיות ריק",
+    "min": "שדה זה צריך להכיל יותר מ-4 תווים"
+  }
+}

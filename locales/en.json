@@ -1,0 +1,32 @@
+{
+  "login": {
+    "entrance": "Entrance",
+    "name": "Email",
+    "password": "Password",
+    "login_button": "Login",
+    "signup_button": "Don't Have Account?",
+    "login_error" : "Email Or Password Are Incorrect"
+
+  },
+  "register": {
+    "title": "Register",
+    "name": "Name",
+    "password": "Password",
+    "country": "Country",
+    "city": "City",
+    "email" : "email",
+    "phone": "Phone Number To Send Ball",
+    "image": "Image",
+    "imageSelect": "Choose Image",
+    "signup_button": "Sing Up",
+    "cancel_button": "Cancel",
+    "terms" : "I Accept Terms"
+  },
+  "user_profile": {
+    "title": "Your Profile"
+  },
+  "validators": {
+    "empty": "Can't be blank",
+    "min": "Must be 4 characters or more"
+  }
+}

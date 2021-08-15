@@ -1,0 +1,56 @@
+{
+  "name": "ballGift",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "postinstall": "npx jetify"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.13.2",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/native": "^5.8.0",
+    "@react-navigation/stack": "^5.10.0",
+    "axios": "^0.21.0",
+    "hebrew-date": "^1.0.6",
+    "moment": "^2.29.1",
+    "moment-countdown": "^0.0.3",
+    "moment-timezone": "^0.5.32",
+    "react": "16.13.1",
+    "react-native": "0.63.3",
+    "react-native-dotenv": "^2.4.2",
+    "react-native-gesture-handler": "^1.8.0",
+    "react-native-i18n": "^2.0.15",
+    "react-native-image-picker": "2.3.4",
+    "react-native-keyboard-aware-scroll-view": "^0.9.3",
+    "react-native-paper": "^4.2.0",
+    "react-native-permissions": "^3.0.4",
+    "react-native-safe-area-context": "^3.1.8",
+    "react-native-screens": "^2.11.0",
+    "react-native-switch": "^2.0.0",
+    "react-native-switch-selector": "^2.0.6",
+    "react-native-twilio-video-webrtc": "https://github.com/blackuy/react-native-twilio-video-webrtc",
+    "react-native-vector-icons": "^7.1.0",
+    "socket.io-client": "^3.0.5",
+    "sync-storage": "^0.4.2",
+    "validator": "^13.1.17"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/runtime": "^7.12.1",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.0",
+    "eslint": "^7.11.0",
+    "jest": "^26.6.0",
+    "jetifier": "^2.0.0",
+    "metro-react-native-babel-preset": "^0.63.0",
+    "react-test-renderer": "16.13.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
