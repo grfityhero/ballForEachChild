@@ -13,7 +13,7 @@ const Login = ({navigation}) => {
         isSabbath().then((s) => {
             console.log("data : ",s.data)
             if (!s.data.isAllow) {
-                navigation.navigate('Sabbath', {data: s.data.data});
+                // navigation.navigate('Sabbath', {data: s.data.data});
             }
         });
     }, []);

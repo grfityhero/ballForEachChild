@@ -91,7 +91,6 @@
 				089E690EBB39657D69A01A6F /* Pods-ballGift-ballGiftTests.debug.xcconfig */,
 				E6EB30BA8690D6DF9E8D025C /* Pods-ballGift-ballGiftTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -123,7 +122,6 @@
 			children = (
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -494,6 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8SRH38M487;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ballGift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -520,6 +519,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8SRH38M487;
 				INFOPLIST_FILE = ballGift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

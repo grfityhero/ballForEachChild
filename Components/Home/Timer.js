@@ -9,7 +9,7 @@ import {StyleSheet, View} from 'react-native';
 
 const Timer = ({restartDay}) => {
     const [time, setTime] = useState(0);
-
+    const [imageBall , setImageBall] = React.useState(basketball)
     const timeLeft = () => {
         const date = moment().utc(-2);
         const end = moment().utc(-2);
@@ -30,6 +30,17 @@ const Timer = ({restartDay}) => {
             restartDay();
         }
         setTime(`${hours}:${min}:${sec}`);
+        let day = moment().day();
+        let h = moment().hour();
+        if((day ===2 && h > 13 || day === 3 && h < 14) || (day ===4 && h > 13 || day === 5 && h < 14) ||
+            (day ===6 && h > 13 || day === 7 && h <14 )){
+            // return <Avatar.Image source={football} size={30} ></Avatar.Image>
+            setImageBall(football)
+        }
+        else{
+            setImageBall(basketball)
+            // return <Avatar.Image source={basketball} size={30} ></Avatar.Image>
+        }
     };
 
     useEffect(() => {
@@ -55,7 +66,7 @@ const Timer = ({restartDay}) => {
 
     return (
         <View style={styles.timer}>
-           <GetBall/>
+            <Avatar.Image source={imageBall} size={30} ></Avatar.Image>
             {/*<Avatar.Image source={ball} size={30} ></Avatar.Image>*/}
             <Text style={styles.text}>{time}</Text>
         </View>
@@ -70,7 +81,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'gray'
     },
     text: {
-        fontSize: 40,
+        fontSize: 35,
         width: '60%',
     },
 

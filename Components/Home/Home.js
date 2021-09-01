@@ -13,7 +13,6 @@ import socketIOClient from 'socket.io-client';
 const ENDPOINT = 'http://161.35.43.123:5000';
 const socket = socketIOClient(ENDPOINT);
 
-
 const Home = ({route, navigation}) => {
     const useScroll = React.useRef();
     const [posts, setPosts] = useState([]);
@@ -50,9 +49,7 @@ const Home = ({route, navigation}) => {
         answerData();
     }, []);
 
-    // useEffect(() => {
-    //     console.log("search")
-    // }, [answerVisible, search]);
+
 
     useEffect(() => {
         if (route.params && route.params.newPost) {
@@ -98,10 +95,8 @@ const Home = ({route, navigation}) => {
     };
 
     const scrollRank = data => {
-        if (data > 0) {
-            // this.scroller.scrollTo({x: 0, y: 110 * (data - 1) + 10 * (data - 1)});
+        if (data > 0)
             useScroll.current.scrollTo({x: 0, y: 110 * (data - 1) + 10 * (data - 1)})
-        }
     };
 
     socket.on("likesupdated", (data) => {
@@ -115,13 +110,22 @@ const Home = ({route, navigation}) => {
         }
     })
 
+    socket.on("got_new_post",async (newPost)=>{
+        console.log("newPost :",newPost)
+        if(!posts.find(x=>newPost.postId === x.postId)){
+            console.log("not fount")
+            let newPosts = [...posts];
+            newPosts.push(newPost)
+            await setPosts(newPosts);
+        }
+    })
+
     const restartDay = () => {
         setPosts([]);
     }
 
 
     return (
-        <>
             <SafeAreaView style={styles.style}>
                 <NavigationRow restartDay={restartDay} navigation={navigation}/>
                 <View style={{flexDirection: 'row', width: '100%'}}>
@@ -151,6 +155,7 @@ const Home = ({route, navigation}) => {
                             );
                         })
                         .map((_p, index) => {
+                            console.log(_p)
                             return (
                                 <Answer
                                     onPress={modalClick}
@@ -171,7 +176,6 @@ const Home = ({route, navigation}) => {
                     }}
                 />
             </SafeAreaView>
-        </>
     );
 };
 
@@ -180,7 +184,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         flex: 1,
         backgroundColor: '#0097FF',
-        paddingTop: '10%',
+        paddingTop: 10,
     },
     timer: {
         backgroundColor: 'gray',

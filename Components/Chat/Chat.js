@@ -100,16 +100,16 @@ const Chat = ({navigation}) => {
         }
         const {callerId, callReciverId} = res.data;
 
-        //
+
         // getTokenRoomChat(callerId, callReciverId, true).then((res) => {
         //     console.log("res :", res)
         // }).catch((err) => {
         //     console.log("errrrrrorrrrrr",err)
         // })
-        //
-        // const tokenRes = await getTokenRoomChat(callerId, callReciverId, true);
-        // console.log("tokenRes :",tokenRes)
-        // displayVideo(tokenRes.data.token);
+
+        const tokenRes = await getTokenRoomChat(callerId, callReciverId, true);
+        console.log("tokenRes :",tokenRes)
+        displayVideo(tokenRes.data.token);
     };
 
     const answerIncomingCall = async callerId => {

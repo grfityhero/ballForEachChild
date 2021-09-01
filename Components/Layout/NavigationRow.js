@@ -47,7 +47,7 @@ const NavigationRow = ({navigation,restartDay}) => {
                     }}/>
                 </View>
 
-                <View style={{paddingRight: 10}}>
+                <View >
                     <Timer restartDay={restartDay}/>
                 </View>
 

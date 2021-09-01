@@ -48,7 +48,7 @@ const MyAnswer = ({navigation}) => {
             .then((response) => {
                 setCanAddAnswer(false);
                 if (response.status === 200) {
-                    navigation.navigate('Home', {newPost: response.data});
+                    navigation.navigate('Home');
                 } else {
                     console.log('post not add!!');
                 }

@@ -50,13 +50,13 @@ const TwilioVideoCom = ({token, chatID, hideModal, twilioRef}) => {
   };
 
   const _onRoomDidFailToConnect = error => {
-    console.log('[FailToConnect]ERROR: ', error);
+    // console.log('[FailToConnect]ERROR: ', error);
     hideModal();
     setStatus('disconnected');
   };
 
   const _onParticipantAddedVideoTrack = ({participant, track}) => {
-    console.log('onParticipantAddedVideoTrack: ', participant, track);
+    // console.log('onParticipantAddedVideoTrack: ', participant, track);
 
     setVideoTracks(
       new Map([
@@ -70,11 +70,11 @@ const TwilioVideoCom = ({token, chatID, hideModal, twilioRef}) => {
   };
 
   const _onParticipantRemovedVideoTrack = ({participant, track}) => {
-    console.log('onParticipantRemovedVideoTrack: ', participant, track);
+    // console.log('onParticipantRemovedVideoTrack: ', participant, track);
 
     const videoTracksLocal = videoTracks;
     videoTracksLocal.delete(track.trackSid);
-
+    hideModal();
     setVideoTracks(videoTracksLocal);
   };
 

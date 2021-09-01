@@ -30,8 +30,6 @@ const Stack = createStackNavigator();
 
 
 const App = () => {
-
-
   return (
     <>
       <StatusBar barStyle="dark-content" />

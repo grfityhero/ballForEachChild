@@ -42,7 +42,7 @@ const Filter = ({ranking, userSearch, scrollRank}) => {
             justifyContent: 'space-between',
             alignItems: 'center',
             width: '100%',
-            paddingTop: 20,
+            paddingTop: '5%',
             paddingLeft: 10,
             paddingRight: 10,
         }}>
